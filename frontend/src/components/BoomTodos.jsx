@@ -54,7 +54,7 @@ const BoomTodos = ({ todo, status, id, set }) => {
   };
 
   return (
-    <div className="min-w-1/2 p-4 absolute bg-gray-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-md z-100">
+    <div className="min-w-[calc(100vw-70vw)] p-4 absolute bg-gray-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-md z-100">
       <h1 className="text-center shadow-lg rounded-2xl font-medium px-2 py-1 mt-4 bg-gray-300">
         {todo} TODO
       </h1>

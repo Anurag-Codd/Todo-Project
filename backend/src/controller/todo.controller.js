@@ -2,7 +2,7 @@ import Todo from "../models/todo.model.js";
 
 export const allTodos = async (req, res) => {
   try {
-    const allTodos = await Todo.find();
+    const allTodos = await Todo.find().sort({ createdAt: -1 });
 
     if (allTodos.length <= 0) {
       return res.status(400).json({ message: "no todos found" });
@@ -32,7 +32,7 @@ export const createTodo = async (req, res) => {
 
 export const updateTodo = async (req, res) => {
   try {
-    const { title, description } = req.body;
+    const { title, description, pinned } = req.body;
     const id = req.params.id;
 
     if (!title && !description) {
